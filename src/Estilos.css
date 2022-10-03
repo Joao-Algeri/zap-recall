@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+.conteudo{
+    width: 100vw;
+    height: 100vh;
+    background-color:#FB6B6B;
+    display:flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+
+}
+.logo{
+    display:flex;
+    font-size: 36;
+    color:white;
+    align-items: center;
+}
+.rodape{
+    height: 20%;
+    width: 100%;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+}
+.botoes{
+    width: 100%;
+    height: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.botao{
+    width: 25%;
+    height: 75%;
+    border: none;
+    margin-right:2%;
+    border-radius: 5%;
+    color:white;
+    font-size: 12;
+}
+.vermelho{
+    background-color: #FF3030;
+   
+}
+.laranja{
+    background-color:#FF922E;
+    
+}
+.verde{
+    background-color: #2FBE34;
+}
+.contador{
+    width: 100%;
+    height: 50%;
+font-size: 18;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+.carta{
+    display:flex;
+    background-color:white;
+    width: 60%;
+    height: 5%;
+    margin-bottom:5px;
+    justify-content: space-between;
+    align-items: center;
+}
+.carta img{
+    width: 5%;
+    height: 25%;
+}
+.carta.enunciado{
+    background-color:yellow;
+}
+.carta.cartaResposta{
+    background-color: yellow;
+}
+.carta.cartaResposta img{
+    display:none;
+}
+.carta.final{
+    background-color:white;
+    
+}
+.certo{
+color:#2FBE34;
+text-decoration: line-through;
+}
+.errado{
+    color:#FF3030;
+    text-decoration: line-through;
+}
+.quase{
+    color:#FF922E;
+    text-decoration: line-through;
+}

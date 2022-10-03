@@ -5,7 +5,7 @@ export default function Topo(){
        // <Logo>
        <div className="logo">
             <img src={Zap} alt="imagem zap"/>
-            <div>Zap Recall</div>
+            <div>ZapRecall</div>
         </div>
     )
 } 

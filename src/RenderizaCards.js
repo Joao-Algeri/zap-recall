@@ -3,7 +3,6 @@ import seta_virar from "./img/seta_virar.png"
 import certo from "./img/icone_certo.png"
 import quase from "./img/icone_quase.png"
 import errado from "./img/icone_erro.png"
-import {useState} from "react";
 export default function RenderizaCards({cartas,setCartas}) {
        
     
@@ -17,14 +16,7 @@ export default function RenderizaCards({cartas,setCartas}) {
         </>
     )
     function ImprimeInicial({carta}){
-        // const novaSeta=seta_play;
-        //const[seta,setSeta]=useState(seta_play) 
-        // if(carta.resultado==="certo"){novaSeta=certo;}
-        // else if(carta.resultado==="quase"){novaSeta=quase;}
-        // else if(carta.resultado==="errado"){novaSeta=errado;}
-        //setSeta(certo)
-
-        return (carta.estado === 'inicial' || carta.estado === 'final' ?
+              return (carta.estado === 'inicial' || carta.estado === 'final' ?
 
             <ImprimeInicialOuFinal carta={carta} setCartas={setCartas} cartas={cartas}/>
             :
@@ -54,11 +46,11 @@ function ImprimeInicialOuFinal({carta,setCartas,cartas}){
     function IconeCheck() {
         return (
 
-            carta.resultado === "certo"? <img src={certo}/>
+            carta.resultado === "certo"? <img className="icone"src={certo} alt="icone certo"/>
             :
-            carta.resultado === "quase"? <img src={quase}/>
+            carta.resultado === "quase"? <img className="icone"src={quase} alt="icone quase"/>
             :
-            carta.resultado === "errado"?<img src={errado}/>
+            carta.resultado === "errado"?<img className="icone"src={errado} alt="icone errado"/>
             :
             <></>
         )
@@ -67,14 +59,14 @@ function ImprimeInicialOuFinal({carta,setCartas,cartas}){
         carta.estado==='inicial' ?
             <div key={carta.id} className={`carta ${carta.estado} ${carta.resultado}`}>
 
-                <div>{`Pergunta${carta.id + 1}`}</div>
-                <img onClick={() => viraCarta(carta.id)} src={seta_play} alt="play" />
+                <div className="pergunta">{`Pergunta ${carta.id + 1}`}</div>
+               <img className="icone"onClick={() => viraCarta(carta.id)} src={seta_play} alt=" icone play" />
             </div>
             :
             carta.estado==='final' ?
             <div key={carta.id} className={`carta ${carta.estado} ${carta.resultado}`}>
 
-                <div>{`Pergunta${carta.id + 1}`}</div>
+                <div className="pergunta">{`Pergunta ${carta.id + 1}`}</div>
                 <IconeCheck/>
             </div>
             :<></>
@@ -92,8 +84,8 @@ function ImprimeEnunciado({carta,setCartas,cartas}) {
     return (
         <div key={carta.enunciado} className={`carta ${carta.estado}`}>
 
-            <div>{carta.estado === 'enunciado' ? carta.pergunta : carta.resposta}</div>
-            <img onClick={() => mostrarResposta(carta.id, carta.estado)} src={seta_virar} alt="play" />
+            <div className={"texto"}>{carta.estado === 'enunciado' ? carta.pergunta : carta.resposta}</div>
+            <div className={"imagem"}> <img onClick={() => mostrarResposta(carta.id, carta.estado)} src={seta_virar} alt="play" /></div>
         </div>
     )
 }

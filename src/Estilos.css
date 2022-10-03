@@ -7,19 +7,27 @@
     background-color:#FB6B6B;
     display:flex;
     flex-direction: column;
-    
     align-items: center;
-    
+    margin-bottom: 25vw; 
 
 }
 .logo{
     display:flex;
-    font-size: 36;
+    font-size: 36px;
+    font-family: 'Righteous';
+    font-weight: 400;
     color:white;
     align-items: center;
+    margin-bottom:60px;
+    margin-top:48px;
+}
+.logo img{
+    margin-right: 15px;
+    width: 42px;
+    height: 60px;
 }
 .rodape{
-    height: 20%;
+    height: 150px;
     width: 100%;
     background-color: white;
     display:flex;
@@ -40,10 +48,12 @@
     width: 25%;
     height: 75%;
     border: none;
+    font-family: "Recursive";
+    font-weight: 400;
     margin-right:2%;
     border-radius: 5%;
     color:white;
-    font-size: 12;
+    font-size: 12px;
 }
 .vermelho{
     background-color: #FF3030;
@@ -59,29 +69,41 @@
 .contador{
     width: 100%;
     height: 50%;
-font-size: 18;
-display:flex;
-justify-content: center;
-align-items: center;
+    font-family: "Recursive";
+    font-weight: 400;
+    color:#333333;
+    font-size: 18;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .carta{
     display:flex;
     background-color:white;
-    width: 60%;
-    height: 5%;
-    margin-bottom:5px;
+    font-family: "Recursive";
+    font-weight: 700;
+    color:#333333;
+    width: 80%;
+    height: 60px;
+    margin-bottom:15px;
     justify-content: space-between;
     align-items: center;
+    border-radius:5px;
+    
 }
 .carta img{
-    width: 5%;
-    height: 25%;
+    width: 20px;
+    height: 23px;
 }
 .carta.enunciado{
-    background-color:yellow;
+    background-color:#FFFFD4;
+    height: 120px;
+    flex-direction: column;
 }
 .carta.cartaResposta{
-    background-color: yellow;
+    flex-direction: column;
+    background-color: #FFFFD4;
+    height: 120px;
 }
 .carta.cartaResposta img{
     display:none;
@@ -89,6 +111,12 @@ align-items: center;
 .carta.final{
     background-color:white;
     
+}
+.pergunta{
+    margin-left:10px;
+}
+.icone{
+    margin-right:10px;
 }
 .certo{
 color:#2FBE34;
@@ -101,4 +129,19 @@ text-decoration: line-through;
 .quase{
     color:#FF922E;
     text-decoration: line-through;
+}
+.imagem{
+    display:flex;
+    
+    width: 95%;
+    height:30%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.texto{
+    display:flex;
+    width: 95%;
+    height: 65%;
+    justify-content: flex-start;
+    margin-top:5%;
 }

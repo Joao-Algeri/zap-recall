@@ -1,5 +1,5 @@
 import RenderizaCards from "./RenderizaCards"
-
+import styled from "styled-components";
 import RodaPe from "./RodaPe"
 import Topo from "./Topo"
 import {useState} from "react"
@@ -73,11 +73,21 @@ export default function Conteudo(){
     
     return(
         
-        <div className="conteudo">
+        <ConteudoTotal>
             <Topo/>
             <RenderizaCards cartas={cartas} setCartas={setCartas}/>
             <RodaPe cartas={cartas} setCartas={setCartas}/>
             
-        </div>
+        </ConteudoTotal>
     )
 }  
+const ConteudoTotal= styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-color:#FB6B6B;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25vw; 
+
+`
